@@ -1,0 +1,2 @@
+# CurrencyEx-Hillel
+DjangoLearningProject
