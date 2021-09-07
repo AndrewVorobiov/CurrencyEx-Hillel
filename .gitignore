@@ -129,6 +129,6 @@ dmypy.json
 .pyre/
 
 app/db.sqlite3
-../.idea
+../.idea/
 ./
 ../requirements.txt
