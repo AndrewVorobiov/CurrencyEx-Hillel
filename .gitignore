@@ -130,5 +130,4 @@ dmypy.json
 
 app/db.sqlite3
 .idea/
-app/
 requirements.txt
