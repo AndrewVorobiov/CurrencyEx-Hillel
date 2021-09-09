@@ -30,3 +30,4 @@ urllib3==1.26.6
 virtualenv==20.7.2
 virtualenv-clone==0.5.6
 Werkzeug==2.0.1
+flake8
