@@ -4,21 +4,22 @@ certifi==2021.5.30
 charset-normalizer==2.0.4
 click==8.0.1
 conda==4.3.16
-Cython @ file:///buildstream/freedesktop-sdk/components/cython.bst
 distlib==0.3.2
 Django==3.2.7
 filelock==3.0.12
+flake8==3.9.2
 Flask==2.0.1
 idna==3.2
 itsdangerous==2.0.1
 Jinja2==3.0.1
 Mako==1.1.5
-Markdown @ file:///buildstream/freedesktop-sdk/components/python3-markdown.bst
 MarkupSafe==2.0.1
-meson @ file:///buildstream/freedesktop-sdk/components/meson.bst
+mccabe==0.6.1
 pipenv==2021.5.29
 platformdirs==2.3.0
+pycodestyle==2.7.0
 pycosat==0.6.3
+pyflakes==2.3.1
 Pygments==2.10.0
 pytz==2021.1
 requests==2.26.0
@@ -30,4 +31,3 @@ urllib3==1.26.6
 virtualenv==20.7.2
 virtualenv-clone==0.5.6
 Werkzeug==2.0.1
-flake8
