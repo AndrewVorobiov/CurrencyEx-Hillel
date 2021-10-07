@@ -10,7 +10,10 @@ class Rate(models.Model):
 class ContactUs(models.Model):
     id = models.AutoField(primary_key=True)
     email_from = models.EmailField(max_length=30)
-    subject = models.CharField(max_length=25)
+    subject = models.CharField(max_length=30)
     message = models.TextField()
+class Source(models.Model):
+    name = models.CharField(max_length=25)
+    url = models.CharField(max_length=60)
 
 
