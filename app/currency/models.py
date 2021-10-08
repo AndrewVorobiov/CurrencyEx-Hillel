@@ -12,7 +12,7 @@ class ContactUs(models.Model):
     email_from = models.EmailField(max_length=30)
     subject = models.CharField(max_length=30)
     message = models.TextField()
-class Source(models.Model):
+class Bank(models.Model):
     name = models.CharField(max_length=25)
     url = models.CharField(max_length=60)
 

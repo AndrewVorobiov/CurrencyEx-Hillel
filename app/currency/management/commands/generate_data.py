@@ -13,4 +13,3 @@ class Command(BaseCommand):
                 buy=random.uniform(20, 30),
                 source=random.choice(('privatbank''monobank', 'vKurse'))
             )
-class Create_random_users(BaseCommand):
