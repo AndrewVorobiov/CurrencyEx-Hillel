@@ -18,3 +18,4 @@ class ContactUsForm(forms.ModelForm):
         'subject',
         'message'
         )
+

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'annoying',
     'debug_toolbar',
+    'import_export',
 
 
     'currency',
@@ -136,3 +137,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 INTERNAL_IPS = [
     '127.0.0.1'
     ]
+
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+
+try:
+    from settings.setttings_local import  *
+except ImportError:
+    print('No local settings were found!\n' *5)

@@ -6,6 +6,9 @@ runserver:
 makemigrations:
 	$(manage_py) makemigrations
 
+createsuperuser:
+	$(manage_py) createsuperuser
+
 migrate:
 	$(manage_py) migrate
 

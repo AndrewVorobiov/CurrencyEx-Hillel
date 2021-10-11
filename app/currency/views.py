@@ -1,6 +1,7 @@
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
 
+
 from currency.utils import generate_password as gp
 
 from django.shortcuts import render, get_object_or_404, reverse, redirect
@@ -8,6 +9,8 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.http import HttpResponseRedirect
 from currency.models import Rate, ContactUs
 from currency.forms import RateForm, ContactUsForm
+from django.core.mail import send_mail
+
 
 from annoying.functions import get_object_or_None
 
@@ -56,10 +59,34 @@ class RateDeleteView(DeleteView):
 class CreateContactUs(CreateView):
     form_class = ContactUsForm
     template_name = 'contactus_form.html'
+    success_url = reverse_lazy('index')
     #model = ContactUs
     #fields = (
       #   'email_from',
       #  'subject',
        # 'message',
     #)
-    success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        data = form.cleaned_data
+        body = f'''
+        From: {data['email_from']}
+        Topic: {data['subject']}
+        
+        Message:
+        {data['message']}
+        '''
+
+
+        send_mail(
+            'ContactUs from Client',
+            body,
+            'testappsmtp123@gmail.com',
+            ['dazhbog0@gmail.com'],
+            fail_silently=False,
+        )
+        return super().form_valid(form)
+
+
+
+
