@@ -1,9 +1,7 @@
-
-
-
-
 from django.contrib import admin
 from currency.models import Rate
+
+
 
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
@@ -25,6 +23,8 @@ class RateAdmin(ImportExportModelAdmin):
     list_filter = (
         'type',
         'source',
+
+
     )
     search_fields = (
         'type',
