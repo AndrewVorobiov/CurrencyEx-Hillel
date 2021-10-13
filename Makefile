@@ -6,6 +6,12 @@ runserver:
 makemigrations:
 	$(manage_py) makemigrations
 
+worker:
+	cd app && celery -A settings worker -l info
+
+beat:
+	cd app && celery -A settings beat -l info
+
 createsuperuser:
 	$(manage_py) createsuperuser
 
