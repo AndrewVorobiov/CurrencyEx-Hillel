@@ -11,6 +11,6 @@ class Command(BaseCommand):
                 type=random.choice(('usd', 'eur')),
                 sale=random.uniform(20, 30),
                 buy=random.uniform(20, 30),
-                source=random.choice(('privatbank''monobank', 'vKurse'))
+                source=random.choice(('privatbank', 'monobank', 'vKurse'))
             )
 class Command(BaseCommand):
